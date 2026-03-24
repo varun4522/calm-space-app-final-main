@@ -1,7 +1,6 @@
 {
   "expo": {
     "name": "Calm Space",
-    "slug": "calm-space",
     "orientation": "portrait",
     "icon": "./assets/images/logo2.png",
     "scheme": "calmspace",
@@ -34,7 +33,8 @@
         "android.permission.RECEIVE_BOOT_COMPLETED",
         "android.permission.VIBRATE",
         "android.permission.FOREGROUND_SERVICE",
-        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+        "android.permission.RECORD_AUDIO"
       ],
       "blockedPermissions": [
         "android.permission.READ_MEDIA_IMAGES",
@@ -106,9 +106,9 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "766744c8-deca-4ae4-b33e-04085a5d31b2"
+        "projectId": "346bfa06-6746-4ad2-8bd2-54bfed189daa"
       }
     },
-    "owner": "varun45"
+    "owner": "helpdeskcalms-organization"
   }
 }
