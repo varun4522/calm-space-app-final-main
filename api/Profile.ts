@@ -3,6 +3,7 @@ import { Profile } from "@/types/Profile";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { router } from "expo-router";
 import { Alert } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import Toast from "react-native-toast-message";
 
 
@@ -99,7 +100,7 @@ export const useUpdateProfilePicture = () => {
       console.log('✅ Profile picture updated in Supabase');
     },
     
-    onError: (error) => {
+    onError: (error: any) => {
       console.error('❌ Error updating profile picture:', error);
     },
   });
@@ -160,7 +161,16 @@ export const useDeleteAccount = () => {
       const { error: profileError } = await supabase.from("profiles").delete().eq("id", userId);
       if (profileError) throw new Error(profileError.message);
 
-      // 7. Sign out locally
+      // 7. Clear local wellness data (mandatory for privacy compliance)
+      const wellnessKeys = [
+        'journal_text',
+        'gratitude_entries',
+        'journal_dark_mode',
+        'journal_background'
+      ];
+      await AsyncStorage.multiRemove(wellnessKeys);
+
+      // 8. Sign out locally
       await supabase.auth.signOut();
 
       return { success: true };

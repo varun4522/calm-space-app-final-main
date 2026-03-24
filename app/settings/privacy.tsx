@@ -11,39 +11,42 @@ export default function PrivacyPolicy() {
     {
       title: '1. Information We Collect',
       items: [
-        'Profile Information: When you register, we collect your name, email address, registration number, course, and phone number.',
-        'User Content: Journals, mood logs, and messages shared within the app.',
-        'Location Data: We collect your precise location (GPS coordinates) ONLY when you explicitly use the \"Share My Location\" feature in the Emergency tab. This data is collected to facilitate emergency assistance.',
-        'Background Location: We do NOT collect your location in the background.'
+        'Sensitive Wellness Data: We collect your mood logs, journal reflections, and personal gratitude entries to provide our core wellness tracking service.',
+        'Profile Information: Name, email address, registration number, course, and phone number provided during registration.',
+        'User Content: Messages shared within the app\'s support system.',
+        'Location Data: We collect your precise GPS location ONLY when you explicitly use the "Share My Location" feature in the Emergency tab for emergency assistance.',
+        'Media: Profile pictures and community images selected via the system Photo Picker (no broad storage access required).'
       ]
     },
     {
-      title: '2. How We Use Your Information',
+      title: '2. How We Use and Protect Your Information',
       items: [
-        'To provide mental wellness support and resources.',
-        'To facilitate emergency assistance by sharing your coordinates with designated responders.',
-        'To display your mood trends and journaling history.'
+        'To provide personalized mental wellness support and trend tracking.',
+        'To facilitate emergency assistance by sharing coordinates with designated responders during your active request.',
+        'All data is encrypted in transit using industry-standard HTTPS/TLS protocols.',
+        'We use Supabase (BaaS) for secure cloud infrastructure and authentication.'
       ]
     },
     {
       title: '3. Data Sharing and Disclosure',
       items: [
-        'Emergency Responders: Your location is shared with authorized responders during an active emergency request.',
-        'Service Providers: We use Supabase (a backend-as-a-service) to store your profile, location history, and app data.',
-        'Legal Requirements: We may disclose information if required by law.'
+        'NO Selling: We NEVER sell your personal or sensitive mental health data to third parties.',
+        'Emergency Responders: Your location is shared ONLY during an active emergency request you initiate.',
+        'Service Providers: Data is processed by Supabase and Expo to facilitate core app functionality.'
       ]
     },
     {
       title: '4. Your Rights and Data Deletion',
       items: [
-        'You can view and edit your profile information in the Settings screen.',
-        'You can delete your entire account and all associated data (journals, mood logs, location history) via the \"Delete Account & Data\" button in Settings. This action is permanent and irreversible.'
+        'Personal Data Control: You can view and edit your profile in Settings.',
+        'Permanent Deletion: You can delete your entire account and all associated data (journals, mood logs, messages) via the "Delete Account" button. This action permanently wipes data from both our cloud and your local device.'
       ]
     },
     {
-      title: '5. Security',
+      title: '5. Updates and Contact',
       items: [
-        'We use industry-standard security measures, including Supabase\'s secure authentication and encryption, to protect your data.'
+        'We may update this policy periodically; changes will be posted within the app.',
+        'Contact: Reach us at support@calmspace.com for any privacy concerns.'
       ]
     }
   ];
