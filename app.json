@@ -32,7 +32,10 @@
         "android.permission.MODIFY_AUDIO_SETTINGS",
         "android.permission.POST_NOTIFICATIONS",
         "android.permission.RECEIVE_BOOT_COMPLETED",
-        "android.permission.VIBRATE"
+        "android.permission.VIBRATE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
       ],
       "blockedPermissions": [
         "android.permission.READ_MEDIA_IMAGES",
@@ -104,9 +107,9 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "88be55dd-c9ff-438f-9d01-9348d7b0dd7c"
+        "projectId": "766744c8-deca-4ae4-b33e-04085a5d31b2"
       }
     },
-    "owner": "helpdeskcalms-organization"
+    "owner": "varun45"
   }
 }
