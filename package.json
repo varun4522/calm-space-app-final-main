@@ -80,7 +80,7 @@
     "concurrently": "^9.2.0",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~55.0.0",
-    "expo-module-scripts": "^5.0.7",
+    "expo-module-scripts": "^3.0.5",
     "typescript": "~5.9.2"
   },
   "expo": {
