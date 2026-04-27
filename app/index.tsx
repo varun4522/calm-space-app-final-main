@@ -124,6 +124,20 @@ useEffect(() => {
   async function signInWithEmail() {
     setIsLoading(true);
     
+    // DEBUG: Check if Supabase is initialized
+    if (!supabase) {
+      console.error('❌ CRITICAL: Supabase is NOT initialized - check environment variables in APK!');
+      Toast.show({ 
+        type: 'error', 
+        text1: 'Configuration Error', 
+        text2: 'Supabase not initialized - contact support',
+        position: 'top',
+        visibilityTime: 2000
+      });
+      setIsLoading(false);
+      return;
+    }
+    
     try {
       // Check if input is email or registration number
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -171,6 +185,7 @@ useEffect(() => {
       // Login with email and password
       const { data, error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) {
+        console.error('❌ Login error:', JSON.stringify(error, null, 2));
         let errorMessage = error.message;
         if (error.message.includes('network') || error.message.includes('fetch') || error.message.includes('Failed to fetch')) {
           errorMessage = 'Network error. Please check your internet connection.';
@@ -188,6 +203,7 @@ useEffect(() => {
       setIsLoading(false);
       // useEffect will automatically redirect when session updates
     } catch (err: any) {
+      console.error('❌ Catch block error:', JSON.stringify(err, null, 2));
       Toast.show({ 
         type: 'error', 
         text1: 'Network error', 
