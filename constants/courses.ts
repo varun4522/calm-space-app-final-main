@@ -6,7 +6,7 @@ export const FACULTY = {
   AGRICULTURAL_SCIENCES: 'Faculty of Agricultural Sciences',
   APPLIED_BASIC_SCIENCES: 'Faculty of Applied and Basic Sciences',
   DESIGN: 'Faculty of Design',
-  MASS_COMMUNICATIONS_MEDIA_AND_TECHNOLOGY: 'Faculty of Mass Communications and Media Technology',
+  MASS_COMMUNICATIONS_AND_MEDIA_TECHNOLOGY: 'Faculty of Mass Communications and Media Technology',
   BEHAVIOURAL_SCIENCES: 'Faculty of Behavioural Sciences',
   LAW: 'Faculty of Law',
   EDUCATION: 'Faculty of Education',
