@@ -348,7 +348,7 @@ export default function StudentRegister() {
         .single();
 
       if (insertError) {
-        console.error('Profile insert error:', insertError);
+        console.error('Profile insert error:', JSON.stringify(insertError, null, 2));
         Alert.alert(
           'Profile creation failed',
           'Account created but profile setup failed. Please contact support.'

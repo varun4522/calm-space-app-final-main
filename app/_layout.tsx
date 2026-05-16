@@ -31,7 +31,7 @@ export default function RootLayout() {
       <AuthProvider>
       <QueryProvider>
         <Stack screenOptions={{ headerShown: false }} />
-        <StatusBar style="auto" />
+        <StatusBar style="light" />
         <Toast config={toastConfig}/>
       </QueryProvider>
       </AuthProvider>
